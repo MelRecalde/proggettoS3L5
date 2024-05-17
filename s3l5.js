@@ -122,7 +122,7 @@ const movies = [
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
-console.log("---------- ESERCIZIO 1 ----------")
+console.log("---------- ESERCIZIO A ----------")
 
 let a = 10
 let b = 20
@@ -134,7 +134,7 @@ console.log("The result is : " , sum)
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-console.log("---------- ESERCIZIO 2 ----------")
+console.log("---------- ESERCIZIO B ----------")
 
 let random = Math.floor(Math.random() * 20)
 console.log("This is a random number : " , random)
@@ -143,7 +143,7 @@ console.log("This is a random number : " , random)
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-console.log("---------- ESERCIZIO 3 ----------")
+console.log("---------- ESERCIZIO C ----------")
 
 const me = {
     name: "Melquisedic",
@@ -157,7 +157,7 @@ console.log("This is my bio : " , me)
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-console.log("---------- ESERCIZIO 4 ----------")
+console.log("---------- ESERCIZIO D ----------")
 
 delete me.age
 console.log("Thi is me without my age : ", me)
@@ -165,7 +165,7 @@ console.log("Thi is me without my age : ", me)
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
-console.log("---------- ESERCIZIO 5 ----------")
+console.log("---------- ESERCIZIO E ----------")
 
 me.skills = ["JavaScript"]
 console.log("Adding a list of my skills in programming : " , me)
@@ -173,7 +173,7 @@ console.log("Adding a list of my skills in programming : " , me)
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
-console.log("---------- ESERCIZIO 6 ----------")
+console.log("---------- ESERCIZIO F ----------")
 
 const skill = me.skills
 skill.push("HTML","CSS", "Java")
@@ -182,7 +182,7 @@ console.log("Adding skills : ",me)
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
-console.log("---------- ESERCIZIO 7 ----------")
+console.log("---------- ESERCIZIO G ----------")
 
 skill.pop([3])
 console.log("I don't know yet Java : ",me)
@@ -193,9 +193,23 @@ console.log("I don't know yet Java : ",me)
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+console.log("---------- ESERCIZIO 1 ----------")
+function dice(){
+    return Math.floor(Math.random()*6)+1
+}
+let n = dice()
+console.log("The dice scores : " , n)
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log("---------- ESERCIZIO 2 ----------")
+function whoIsBigger(n1,n2) {
+    if(n1 > n2)
+        console.log(n1 , " is bigger than " , n2 )
+    else console.log(n2 , " is bigger than " , n1 )
+}
+whoIsBigger(3,1)
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -203,20 +217,47 @@ console.log("I don't know yet Java : ",me)
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+console.log("---------- ESERCIZIO 3 ----------")
+
+function splitMe(string) {
+    return string.split(" ")
+}
+const phrase = splitMe("Enjoy the journey")
+console.log(phrase)
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log("---------- ESERCIZIO 4 ----------")
+
+function deleteOne(string,boolean) {
+    if(boolean === true){
+        return string.slice(1)
+    } else {
+        return string.slice(0,-1)
+    }
+}
+
+let params1 = deleteOne("abcdefg[HI]jklmnopqrstuvwxyz",false)
+let params2 = deleteOne("abcdefg[HI]jklmnopqrstuvwxyz",true)
+console.log("I remove the first letter:",params2, "I remove the last letter:", params1)
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+console.log("---------- ESERCIZIO 5 ----------")
+function onlyLetters(string) {
+    
+}
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+
+
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
