@@ -128,10 +128,10 @@ console.log("I remove the first letter:", params2, "I remove the last letter:", 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 console.log("---------- ESERCIZIO 5 ----------")
-/*function onlyLetters(string) {
-    
+function onlyLetters(string) {
+
 }
-*/
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -142,7 +142,7 @@ function isThisAnEmail(string) {
         return false
     }
     if (string.includes("@")) {
-        console.log("This email valid")
+        console.log("This email is valid")
         return true
     } else {
         console.log("This email is not valid")
@@ -200,6 +200,7 @@ function howManyDays(date) {
 
     return
 }
+(1000 * 60 * 60 * 24)
 */
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -367,16 +368,17 @@ console.log("This is my current object :", currentObject)
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 console.log("---------- ESERCIZIO 12 ----------")
-/*
+
 const newestMovie = () => {
+    let newest = movies[0]
     movies.forEach(e => {
-      let years = parseInt(e.Year)
-      console.log(years)
-    }
-)
+        let years = parseInt(newest.Year)
+        newest = e
+    })
+    return newest
 }
-newestMovie()
-*/
+console.log(newestMovie(movies))
+
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
@@ -384,7 +386,7 @@ console.log("---------- ESERCIZIO 13 ----------")
 /*
 const countMovies = (array) => {
     return movies.map(movie => {
-        movies.length
+        movie.Year
     })
 }
 console.log(countMovies(movies))
@@ -394,7 +396,7 @@ console.log(countMovies(movies))
 */
 /*
 const onlyTheYears = () => {
-    return movies.filter(e => {})
+    return movies.filter(e => e)
 }
 console.log(onlyTheYears())
 */
