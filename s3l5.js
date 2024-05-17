@@ -122,29 +122,70 @@ const movies = [
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
+console.log("---------- ESERCIZIO 1 ----------")
+
+let a = 10
+let b = 20
+
+const sum = a + b
+console.log("The result is : " , sum)
+
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+
+console.log("---------- ESERCIZIO 2 ----------")
+
+let random = Math.floor(Math.random() * 20)
+console.log("This is a random number : " , random)
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
+console.log("---------- ESERCIZIO 3 ----------")
+
+const me = {
+    name: "Melquisedic",
+    surname: "Recalde",
+    age: "29",
+}
+
+console.log("This is my bio : " , me)
+
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
+console.log("---------- ESERCIZIO 4 ----------")
+
+delete me.age
+console.log("Thi is me without my age : ", me)
+
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
+console.log("---------- ESERCIZIO 5 ----------")
+
+me.skills = ["JavaScript"]
+console.log("Adding a list of my skills in programming : " , me)
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
+console.log("---------- ESERCIZIO 6 ----------")
+
+const skill = me.skills
+skill.push("HTML","CSS", "Java")
+console.log("Adding skills : ",me)
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+console.log("---------- ESERCIZIO 7 ----------")
+
+skill.pop([3])
+console.log("I don't know yet Java : ",me)
 
 // Funzioni
 
